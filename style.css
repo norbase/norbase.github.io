@@ -1,0 +1,218 @@
+/* Global Layout Set-up */
+* {
+  /* margin: 0;
+  padding: 0; */
+  box-sizing: border-box;
+}
+
+h1 {
+  color: red;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  font-family: "Roboto", sans-serif;
+  color: #222;
+  background-color: hsl(174, 14%, 29%);
+  background-image: linear-gradient(hsl(174, 14%, 29%), hsl(175, 27%, 8%));
+}
+/* Link Styles */
+
+a {
+  text-decoration: none;
+  color: #ff0000;
+}
+a:hover,
+a:active {
+  color: #ccc;
+}
+
+/* Section Styles */
+
+.main-nav {
+  width: 100%;
+  background: black;
+  min-height: 30px;
+  padding: 10px;
+  position: fixed;
+  text-align: center;
+}
+.nav {
+  display: flex;
+  justify-content: space-around;
+  font-weight: 700;
+  list-style-type: none;
+  margin: 0 auto;
+  padding: 0;
+}
+.nav .name {
+  display: none;
+}
+.nav li {
+  padding: 5px 10px 10px 10px;
+}
+.nav a {
+  transition: all 0.5s;
+}
+.nav a:hover,
+.nav a:active {
+  color: white;
+}
+
+header {
+  text-align: center;
+  background: url("Assets/images/sf_bay_city.jpg") no-repeat top center;
+  background-size: 100% 100%;
+  overflow: hidden;
+  padding-top: 60px;
+}
+header {
+  line-height: 1.5;
+}
+header .profile-image {
+  margin-top: 50px;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 3px solid white;
+  transition: all 0.5s;
+}
+header .profile-image:hover,
+header .profile-image:active {
+  transform: scale(1.75) rotate(360deg);
+}
+.tag {
+  background-color: #efefef;
+  background-image: linear-gradient(white, #a0a09f);
+  color: black;
+  padding: 10px;
+  border-radius: 5px;
+  display: table;
+  margin: 10px auto;
+}
+.location {
+  background-color: #222;
+  background-image: linear-gradient(to bottom right, black, #a0a09f);
+  color: red;
+}
+.card {
+  margin: 30px;
+  padding: 20px 40px 40px;
+  max-width: 500px;
+  text-align: left;
+  background: #a0a09f;
+  background-image: linear-gradient(to bottom right, white, #a0a09f);
+  border-bottom: 4px solid #fff;
+  border-radius: 6px;
+}
+.card:hover,
+.card:active {
+  border-color: #ff0000;
+}
+
+ul.skills {
+  padding: 0;
+  text-align: center;
+}
+
+.skills li {
+  border-radius: 6px;
+  display: inline-block;
+  background: #000;
+  color: white;
+  padding: 5px 10px;
+  margin: 2px;
+}
+
+.skills li:nth-child(odd) {
+  background: #000;
+}
+
+footer {
+  width: 100%;
+  min-height: 30px;
+  padding: 20px 0 40px 20px;
+}
+
+footer .copyright {
+  top: -8px;
+  margin-right: 20px;
+  font-size: 0.75em;
+  color: white;
+}
+
+footer ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+footer ul li {
+  display: inline-block;
+}
+
+a.social {
+  display: inline-block;
+  text-indent: -9999px;
+  width: 30px;
+  height: 30px;
+  background-size: 30px 30px;
+  opacity: 0.5;
+  transition: all 0.25s;
+}
+
+a.linkedin {
+  margin-left: -25px;
+  background-image: url(Assets/images/linkedin.svg);
+}
+a.github {
+  margin-left: 5px;
+  background-image: url(Assets/images/github.svg);
+}
+a.social:hover,
+a.social:active {
+  opacity: 1;
+}
+.clearfix {
+  clear: both;
+}
+
+/* Styles for larger screens */
+@media screen and (min-width: 720px) {
+  .flex {
+    display: flex;
+    max-width: 1200px;
+    justify-content: space-around;
+    margin: 0 auto;
+  }
+
+  header {
+    min-height: 450px;
+  }
+
+  .nav {
+    max-width: 1200px;
+  }
+
+  .nav .name {
+    display: block;
+    margin-right: auto;
+    color: white;
+  }
+
+  main {
+    padding-top: 50px;
+  }
+
+  main p {
+    line-height: 1.6em;
+  }
+
+  footer {
+    font-size: 1.3em;
+    max-width: 1200px;
+    margin: 40px auto;
+  }
+}
